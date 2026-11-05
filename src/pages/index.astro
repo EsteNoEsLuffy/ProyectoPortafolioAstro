@@ -1,6 +1,8 @@
 ---
 import ContactForm from '../components/ContactForm.astro';
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -22,13 +24,13 @@ import Layout from '../layouts/Layout.astro';
 
 	<main>
 		<video
-			src="/imagenes/videos/Video_Inicio.mp4"
+			src={`${base}imagenes/videos/Video_Inicio.mp4`}
 			controls
 			autoplay
 			muted
 			loop
 			playsinline
-			poster="/imagenes/imagenes/Pinguino.png"
+			poster={`${base}imagenes/imagenes/Pinguino.png`}
 			width="600"
 			height="300"
 		>
@@ -76,7 +78,7 @@ import Layout from '../layouts/Layout.astro';
 		</p>
 
 		<img
-			src="/imagenes/imagenes/GeneralAM.png"
+			src={`${base}imagenes/imagenes/GeneralAM.png`}
 			alt="Nancy, estudiante de ingeniería en sistemas computacionales"
 			title="Foto de Nancy"
 			width="600"
@@ -130,7 +132,7 @@ import Layout from '../layouts/Layout.astro';
 
 		<div class="adventures-content">
 			<img
-				src="/imagenes/imagenes/PinguinoMalevolo.png"
+				src={`${base}imagenes/imagenes/PinguinoMalevolo.png`}
 				alt="Ilustración de un pingüino con expresión traviesa"
 				title="Pingüino malévolo"
 				width="600"
@@ -152,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
 			</ul>
 
 			<img
-				src="/imagenes/imagenes/NancyEst.png"
+				src={`${base}imagenes/imagenes/NancyEst.png`}
 				alt="Foto de Nancy, estudiante de ingeniería"
 				width="500"
 				height="500"

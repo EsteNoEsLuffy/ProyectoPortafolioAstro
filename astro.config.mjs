@@ -1,5 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+const base =
+	repositoryName && !repositoryName.endsWith('.github.io') ? `/${repositoryName}/` : '/';
+
+export default defineConfig({ base });
