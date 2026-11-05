@@ -1,0 +1,100 @@
+---
+const contactEmail = 'zzia.genie@gmail.com';
+---
+
+<form class="contact-form" data-contact-email={contactEmail}>
+	<fieldset>
+		<legend>Cuéntame sobre tu proyecto</legend>
+
+		<div class="form-field">
+			<label for="contact-name">Nombre</label>
+			<input
+				id="contact-name"
+				name="Nombre"
+				type="text"
+				placeholder="¿Cómo te llamas?"
+				autocomplete="name"
+				required
+			/>
+		</div>
+
+		<div class="form-field">
+			<label for="contact-email">Correo electrónico</label>
+			<input
+				id="contact-email"
+				name="Correo de contacto"
+				type="email"
+				placeholder="tu@correo.com"
+				autocomplete="email"
+				required
+			/>
+		</div>
+
+		<div class="form-field">
+			<label for="project-type">¿En qué puedo ayudarte?</label>
+			<select id="project-type" name="Tipo de proyecto" required>
+				<option value="" disabled selected>Selecciona un tipo de proyecto</option>
+				<option value="Desarrollo web">Desarrollo web</option>
+				<option value="Automatización">Automatización</option>
+				<option value="Mejora continua">Mejora continua</option>
+				<option value="Otro">Otro / Quiero platicarte una idea</option>
+			</select>
+		</div>
+
+		<div class="form-field">
+			<label for="project-details">Cuéntame un poco más</label>
+			<textarea
+				id="project-details"
+				name="Detalles del proyecto"
+				rows="5"
+				placeholder="¿Qué te gustaría crear, mejorar o resolver?"
+				required></textarea>
+		</div>
+
+		<div class="form-field checkbox-field">
+			<input id="contact-consent" name="Acepto que me contacten" type="checkbox" required />
+			<label for="contact-consent">
+				Acepto que Nancy me contacte para conversar sobre este proyecto.
+			</label>
+		</div>
+	</fieldset>
+
+	<p class="form-status" role="status" aria-live="polite"></p>
+	<button type="submit">Preparar mensaje</button>
+</form>
+
+<script>
+	const form = document.querySelector('.contact-form');
+
+	if (form instanceof HTMLFormElement) {
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+
+			if (!form.reportValidity()) return;
+
+			const contactEmail = form.dataset.contactEmail;
+			if (!contactEmail) {
+				throw new Error('No se configuró el correo de contacto.');
+			}
+
+			const formData = new FormData(form);
+			const subject = `Nueva solicitud freelance: ${formData.get('Tipo de proyecto')}`;
+			const message = [
+				`Nombre: ${formData.get('Nombre')}`,
+				`Correo: ${formData.get('Correo de contacto')}`,
+				`Tipo de proyecto: ${formData.get('Tipo de proyecto')}`,
+				'',
+				'Detalles:',
+				String(formData.get('Detalles del proyecto') ?? ''),
+			].join('\n');
+			const status = form.querySelector('.form-status');
+
+			if (status) {
+				status.textContent =
+					'Se abrirá tu aplicación de correo para que puedas revisar y enviar tu mensaje.';
+			}
+
+			window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+		});
+	}
+</script>

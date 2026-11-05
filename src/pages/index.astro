@@ -1,11 +1,219 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import ContactForm from '../components/ContactForm.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<header>
+		<h1>Adulta funcional (de hecho no) estudiante del TECNM en sus 20's</h1>
+	</header>
+
+	<nav aria-label="Navegación principal">
+		<a class="link" href="#gustos">About Me</a>
+		<a class="link" href="#habilidades_tecnicas">Proyectos y Habilidades Técnicas</a>
+		<a class="link" href="#aventuras">Mis Choco-Aventuras</a>
+		<a
+			class="link"
+			href="https://www.linkedin.com/in/nancy-salcedo-almanza-077b70381"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn</a
+		>
+	</nav>
+
+	<main>
+		<video
+			src="/imagenes/videos/Video_Inicio.mp4"
+			controls
+			autoplay
+			muted
+			loop
+			playsinline
+			poster="/imagenes/imagenes/Pinguino.png"
+			width="600"
+			height="300"
+		>
+			Tu navegador no soporta la reproducción de video.
+		</video>
+
+		<p class="primario">
+			Estudiante de la carrera de ingeniería en <strong>sistemas computacionales TECNM</strong>
+		</p>
+
+		<h2 id="gustos">About Me</h2>
+		<p>
+			Me llamo Nancy Salcedo, tengo 22 años y soy estudiante de ingeniería en sistemas
+			computacionales en el TECNM. Me apasiona la programación y el desarrollo web.
+		</p>
+		<p>
+			Siempre me he comparado con un pingüino; cuando era niña me encantaba jugar Club Penguin,
+			tenía muchas mascotas y mi avatar era morado. Creo que son realmente lindos.
+		</p>
+		<p>
+			Toda mi vida he practicado deportes. Me encanta la natación, jiu jitsu brasileño, danza
+			folclórica y en especial el atletismo: correr es mi vida.
+		</p>
+		<p>
+			A lo largo de mi vida quise estudiar muchas cosas, entre esas derecho penal; me apasiona la
+			política, pero la carrera es bastante cara si consideramos que vivo lejos de la capital,
+			entonces tuve que volver a mi ciudad. Estudiando en el TECNM me di cuenta de que me gusta mi
+			carrera. En realidad es bastante gracioso porque, al no saber nada de ingeniería ni saber
+			qué elegir, terminé metiendo todas las carreras en una ruleta y cayó sistemas. Estoy en
+			7mo, 8vo, 9no semestre (depende la hora), pero me di cuenta de que me encanta industrial y
+			gestión empresarial. Entonces mi carrera la estoy orientando en gestión de proyectos de
+			software, que es una sub-rama de mi carrera. También me interesa mucho la infraestructura
+			cloud, pero ya hablaré de eso más abajo, btw.
+		</p>
+		<p>
+			Me encanta el anime, en especial One Piece; soy una gran fan desde hace varios años. Hace
+			poco estuve en CDMX y pude ir a "Hachi", la cafetería temática, y tengo una foto con Luffy,
+			lol.
+		</p>
+		<p>
+			Soy cristiana y disfruto mucho de congregarme en Sinaí. Apenas el año pasado pude
+			bautizarme y hacer una declaración pública de mi amor por Cristo. Este año fui a un
+			campamento de jóvenes en Huapoca y es una experiencia que considero que todos deberíamos
+			vivir al menos una vez en la vida.
+		</p>
+
+		<img
+			src="/imagenes/imagenes/GeneralAM.png"
+			alt="Nancy, estudiante de ingeniería en sistemas computacionales"
+			title="Foto de Nancy"
+			width="600"
+			height="400"
+			loading="lazy"
+		/>
+
+		<h2 id="habilidades_tecnicas">Información de mis proyectos y habilidades técnicas</h2>
+		<p>
+			Soy líder de un UG de AWS en Chihuahua capital desde hace más de 1 año. Hacemos meetups
+			seguido y participamos con retos prácticos en hackatones. Me gusta mucho aprender y enseñar;
+			suelo ser una persona curiosa, otros le dicen metiche jajajan't. Eso no importa, porque
+			gracias a mis ganas de querer conocer todo tuve la oportunidad de dar una conferencia en
+			TalentLand en 2026.
+		</p>
+		<p>
+			Soy ingeniera certificada por Personal Academy como Lean Six Sigma Black Belt y he trabajado
+			en proyectos de mejora continua en el área industrial en empresas como Continental,
+			solucionando problemas de sobreproducción de piezas y optimizando procesos en el área de AC
+			con un sistema RMA, orientando la planta a la industria 4.0. También he trabajado en
+			proyectos de mejora continua en el área de software, optimizando procesos de desarrollo y
+			entrega de software con metodologías ágiles como Scrum y Kanban.
+		</p>
+		<p>
+			Por el momento, mi proyecto más ambicioso es OpLine, que es un sistema para detección de
+			tiempos muertos. Lo presentamos en la reunión mensual de mejora continua de Index
+			Chihuahua.
+		</p>
+		<p>
+			No me puede faltar el evento más grande de los tecnológicos, Innovatec 2026, donde con mi
+			proyecto SecurIA Fem clasificamos a la nacional. Consiste en un botón de pánico para ayudar
+			a combatir la violencia intrafamiliar, en alianza con Ficosec Delicias: un wearable, app
+			web y móvil e inteligencia artificial para detectar niveles de estrés en la voz.
+		</p>
+
+		<ul class="skills-list">
+			<li>Lenguajes: <strong>HTML, Python, CSS, SQL, ensamblador, Java, C#, Dart</strong></li>
+			<li>
+				Lo que mejor se me da: <strong>automatizar con Python lo que me da flojera hacer a mano</strong>
+			</li>
+			<li>Lo que sigo aprendiendo: <strong>JavaScript, React y Node.js</strong></li>
+			<li>Áreas que me llaman la atención: <strong>infraestructura cloud y mejora continua</strong></li>
+			<li>Herramientas: <strong>Git, VS Code, Figma</strong></li>
+			<li>Cómo trabajo: <strong>aprendo rápido cuando la fecha de entrega ya está encima</strong></li>
+			<li>
+				Superpoder blando: <strong>explicar cosas técnicas sin hacer sentir tonto a nadie</strong>
+			</li>
+			<li>Combustible para programar: <strong>café y una playlist kpop muy kawaii</strong></li>
+			<li>Mi mayor talento: <strong>romper mi código "arreglándolo"</strong></li>
+		</ul>
+
+		<div class="adventures-content">
+			<img
+				src="/imagenes/imagenes/PinguinoMalevolo.png"
+				alt="Ilustración de un pingüino con expresión traviesa"
+				title="Pingüino malévolo"
+				width="600"
+				height="400"
+				loading="lazy"
+			/>
+
+			<h2 id="aventuras">Mis Choco-Aventuras</h2>
+			<ul class="adventures-list">
+				<li>Aventura 1: Carreras de distancia, porque un 5k NO ES UN MARATÓN</li>
+				<li>Aventura 2: Subir al cerro (y quejarme todo el camino jaja)</li>
+				<li>Aventura 3: Hackathones con mi UG de AWS</li>
+				<li>Aventura 4: Ir a TalentLand y dar una conferencia, lol</li>
+				<li>Aventura 5: Comprar un changuito mión</li>
+				<li>
+					Aventura 6: Pintarme en un puesto de Chapultepec la cara por $300 (es un robo) con
+					el amor de mi vida antes de saber que era el amor de mi vida
+				</li>
+			</ul>
+
+			<img
+				src="/imagenes/imagenes/NancyEst.png"
+				alt="Foto de Nancy, estudiante de ingeniería"
+				width="500"
+				height="500"
+				loading="lazy"
+			/>
+
+			<section class="faq-section" aria-labelledby="faq-title">
+				<h2 id="faq-title">Preguntas frecuentes</h2>
+
+				<details>
+					<summary>¿Por qué estudias Sistemas si querías Derecho?</summary>
+					<p>
+						Porque la carrera era cara y vivo lejos de la capital. Al final metí todas las carreras
+						en una ruleta y cayó Sistemas, y resultó que me encanta.
+					</p>
+				</details>
+				<details>
+					<summary>¿En qué semestre estás realmente?</summary>
+					<p>En 7mo, 8vo o 9no, depende de la hora y de a quién le preguntes.</p>
+				</details>
+				<details>
+					<summary>¿Qué haces en el UG de AWS?</summary>
+					<p>Lidero el grupo en Chihuahua capital. Hacemos meetups y participamos en hackatones con retos prácticos.</p>
+				</details>
+				<details>
+					<summary>¿Qué es SecurIA Fem?</summary>
+					<p>
+						Un botón de pánico para ayudar a combatir la violencia intrafamiliar. Con él
+						clasificamos a la nacional de Innovatec 2026.
+					</p>
+				</details>
+				<details>
+					<summary>¿Por qué un pingüino?</summary>
+					<p>
+						Están bonitos, aunque no son mi animal marino favorito. En realidad es la ballena
+						azul y los cachalotes, como Laboon.
+					</p>
+				</details>
+				<details>
+					<summary>Siendo estudiante de sistemas, ¿te bañas?</summary>
+					<p>Hmmmmm, no.</p>
+				</details>
+			</section>
+
+			<section id="contacto" class="contact-section" aria-labelledby="contact-title">
+				<h2 id="contact-title">¿Tienes un proyecto en mente?</h2>
+				<p>
+					Cuéntame qué necesitas y conversemos sobre cómo puedo ayudarte. Me encantan los
+					proyectos de desarrollo web, automatización y mejora continua.
+				</p>
+				<ContactForm />
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<p>Derechos reservados © 2026 Nancy Salcedo</p>
+		<a
+			href="https://www.linkedin.com/in/nancy-salcedo-almanza-077b70381"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn</a
+		>
+	</footer>
 </Layout>
